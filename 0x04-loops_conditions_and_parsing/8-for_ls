@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#executes ls command without hiddden files and leading numbers
+#and dashes
+
+for file in *; do
+	#check if file is not hidden file
+	if [ "${file:0:1}" != "." ]; then
+		#exctract the part of the name after numbers and dash
+		name_part=$(echo "$file" | cut -d'-' -f2-)
+
+		#display in a list format
+		echo "$name_part"
+	fi
+done
