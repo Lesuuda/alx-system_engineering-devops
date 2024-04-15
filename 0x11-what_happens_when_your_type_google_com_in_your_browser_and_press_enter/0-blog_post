@@ -1,0 +1,69 @@
+What happens when you type google.com in your browser and press Enter
+Lesuudaljamani
+Lesuudaljamani
+
+5 min read
+·
+Just now
+
+
+
+
+
+Have you ever wondered what happens when you type www.google.com in your browser and hit ‘Enter’? Many people take for granted the complexity of this process given that it is just a click of a button away and is executed within no time. In contrary this process involves a series of inter-dependent processes. Lets take a deep dive into this process!
+
+
+Source: google.com
+DNS request
+DNS stands for domain name system and is the phone book of the internet. It is a reference table where the browser checks for corresponding IP addresses against passed in domain names. The browser first checks its own cache if it has the corresponding domain name. If the domain name is not available, the browser queries the operating system’s cache. If again the the domain name is not present, the browser queries a series of servers in the internet for the domain name. This is a recursive lookup that involves caching until the corresponding DNS is found. This computer friendly address is returned back to your machine for use in the subsequent process.
+
+Next, your browser uses the TCP/IP protocol to create a direct connection to the Google web server. Together, TCP and IP stand for Transmission Control Protocol and Internet Protocol, respectively, and they specify the guidelines for data transmission over the internet.
+
+Your computer sends a unique TCP packet known as a SYN in order to “call” the Google web server. Synchronize, or SYN, is the first step in the TCP handshake that the two devices take. After receiving the SYN packet, the Google server confirms it received the call and is prepared to connect by sending back a SYN-ACK packet.
+
+The TCP handshake is eventually completed and an active connection is formally established between your computer and the server when your computer sends back an ACK packet. The TCP handshake procedure is similar to calling a number and making sure someone answers before you begin speaking.
+
+Firewall
+Firewalls are installed by major internet businesses like Google to screen out dangerous communications from attackers. Your machine has now directly established a TCP connection with a Google server; however, their firewall still needs to authorize the connection request.
+
+Before permitting an incoming connection request to pass through, the firewall examines it. It confirms the request’s IP address, determines the port it is destined for, and looks for any unusual activities. Your computer can communicate with the Google server through the firewall if it deems the request to be secure and valid.
+
+In any other case, the firewall will reject and block the request to safeguard Google’s infrastructure if there is something suspicious about the connection. It resembles a security officer checking your bags and examining your ID before granting you entry to a private club.
+
+HTTPS/SSL
+Google secures all connection between your device and its servers by default using HTTPS encryption. Because HTTPS encrypts data using SSL (Secure Socket Layer), the S in HTTPS stands for “Secure.”
+
+Your computer can now exchange encryption keys with the Google server directly after it is inside the firewall and access has been authorized. With these keys, the two devices encrypt all of the data they exchange so that outside parties cannot read or alter the communication.
+Hackers are unable to read any of the communication, even if they manage to intercept the data. Other than your computer and the intended Google server, it’s jumbled and looks like meaningless gibberish.
+
+Load Balancer
+Every day, billions of queries are sent to a website with the global traffic of Google. Such a traffic surge would cause a normal web server to crash.
+
+A load balancer is what Google uses to manage its massive scale. This is a reverse proxy that distributes requests equally throughout the Google server infrastructure by sitting in front of the Google web servers.
+
+Similar to a receptionist, the load balancer receives incoming requests and routes them to servers that are available for processing. It chooses the best Google web server and directs your connection to it using sophisticated algorithms.
+
+This makes it possible for Google to distribute the work across their server network more effectively. Due to the load balancer’s ability to transfer requests from an unavailable server to one that is up and running, redundancy and failover are also improved.
+
+Web Server
+After forwarding your request to a Google web server that is available, the load balancer takes care of gathering the files required to create the google.com homepage on that specific server.
+
+The primary HTML, CSS, JavaScript, image files, fonts, and other material required to put together the page’s framework are found by the web server. Consider the web server to be a chef who is gathering all the components for a recipe from the fridge and pantry in order to begin cooking.
+
+These essential elements of a webpage are kept in cache for quick retrieval and are largely unchanging. When it is time to deliver a portion of the response, the web server gathers them and puts them on standby.
+
+Application Server
+Certain parts of Google’s website use dynamic processing and database lookups to create content that is unique for each user, even if the main HTML and assets are static. Google’s application servers receive these requests from the web server.
+
+Application servers manage important back-end functions such as user credential authentication, parameter analysis, customized settings retrieval, search result displaying, and account preference access.
+
+Google’s application servers, for instance, use your device ID or login cookies to determine who you are. Then, based on your specific user data, it customizes the experience for you, showing search results in Spanish if that’s your language of choice.
+
+If there were no application server, every user would encounter a generic, same experience. To provide a personalized page, it incorporates the database searches and logic.
+
+Database
+A query to one or more databases is often required by the application server in order to retrieve certain user data, such as search history, geolocation, language preferences, ad settings, etc. Massive distributed databases containing profiles, analytics information, personalization metadata, and real-time usage statistics are kept up to date by Google.
+
+The application server only asks for the information necessary to create your personalized Google.com experience, such as knowing that you prefer to search from France rather than the United States. As quickly as possible, it loads these specifics from the database into memory.
+
+The application server might be compared to a prep cook who gets specific ingredients for your customized menu. It takes precise measurements from the large storage pantry.
