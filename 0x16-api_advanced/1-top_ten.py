@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """returns the top 10 posts from a sub redit"""
 
-import json  # Add missing import statement
-
 import requests
 
 
