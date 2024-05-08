@@ -18,3 +18,4 @@ def number_of_subscribers(subreddit):
         return results.get("subscribers")
     except json.decoder.JSONDecodeError:
         return 0
+    return 0
